@@ -1,2 +1,1 @@
-# docs
-第一次的练习，加油2021
+# Hello VuePress
