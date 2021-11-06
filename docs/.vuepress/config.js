@@ -49,7 +49,7 @@ module.exports = {
       owner: 'qingfeicode',//自己
       repo: 'docs',
       clientId: '727878822562f3a35d27',
-      clientSecret: '409cff5e3a33ddd1134f07787d4b0003e6a4f970',
+      clientSecret: 'e62f435ea68e304aa148734f7f98b0dce29924ae',
     },
   },
   themeConfig: { //这里面加入各种插件
