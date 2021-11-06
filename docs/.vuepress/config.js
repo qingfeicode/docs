@@ -1,5 +1,10 @@
 //这里是全局的配置文件
+
+const moment = require('moment');//显示日期的插件
+moment.locale("zh-cn")//控制语言为中文
+
 module.exports = {
+  base:"/docs/",
   //一下三个属性是用来设置SEO的
   title:"青飞",
   description:"青飞的笔记",
@@ -8,7 +13,16 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'vuepress 介绍, vuepress 说明, 青飞' }],
     ['link', { rel: 'icon', href: 'assets/img/favicon.ico' }],
   ],
-
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          return moment(timestamp).format("LLLL	")//通过moment插件管理室间格式
+        }
+      }
+    ]
+  ],
   themeConfig: {  //这里面加入各种插件
     lastUpdated: '更行时间' ,  
     logo: '/assets/img/hero.png',  //log设置  
@@ -73,5 +87,7 @@ module.exports = {
         "about2"
       ]
     }
-  }
+  },
+  
+
 }
