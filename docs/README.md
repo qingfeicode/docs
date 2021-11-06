@@ -1,6 +1,6 @@
-----
-  title：Home
-----
+---
+  title: "Home"
+---
 
 ## Hello Vuepress
 ## PWA

@@ -30,25 +30,28 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  plugins: [
-    [
-      '@vuepress/last-updated', {
-        transformer: (timestamp) => {
-          return moment(timestamp).format("LLLL	") //通过moment插件管理室间格式
-        }
-      },
-
-    ],
-    [
-      '@vuepress/pwa', {
-        serviceWorker: true,
-        updatePopup: {
-          message: "新的风暴出现",
-          buttonText: "刷新"
-        }
+  plugins: {
+    '@vuepress/last-updated': {
+      transformer: (timestamp) => moment(timestamp).format("LLLL	") //通过moment插件管理室间格式
+    },
+    '@vuepress/pwa': {
+      serviceWorker: true,
+      updatePopup: {
+        message: "新的风暴出现",
+        buttonText: "刷新"
       }
-    ]
-  ],
+    },
+    '@vssue/vuepress-plugin-vssue': {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github',
+
+      // 其他的 Vssue 配置
+      owner: 'qingfeicode',//自己
+      repo: 'docs',
+      clientId: '727878822562f3a35d27',
+      clientSecret: '409cff5e3a33ddd1134f07787d4b0003e6a4f970',
+    },
+  },
   themeConfig: { //这里面加入各种插件
     lastUpdated: '更行时间',
     logo: '/assets/img/hero.png', //log设置  
