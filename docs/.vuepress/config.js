@@ -19,7 +19,7 @@ module.exports = {
     }],
     ['link', {
       rel: 'icon',
-      href: 'assets/img/favicon.ico'
+      href: '/assets/img/favicon.ico'
     }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
@@ -60,7 +60,7 @@ module.exports = {
         link: '/'
       }, //单个导航栏
       {
-        text: 'Guide',
+        text: 'About',
         link: '/about/'
       },
       { //导航栏做下拉列表
