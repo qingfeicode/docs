@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /hero.png
+# heroImage:/hero.png
 title: Vuepress
 heroText: Hero 标题
 tagline: Hero 副标题

@@ -1,6 +1,6 @@
 ---
  navbar: false # 关闭这个页面的导航栏
- title: 关于我2
+ title: about2
 ---
 
 热爱生活
