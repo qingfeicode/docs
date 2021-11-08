@@ -50,6 +50,7 @@ module.exports = {
       repo: 'docs',
       clientId: '727878822562f3a35d27',
       clientSecret: 'e62f435ea68e304aa148734f7f98b0dce29924ae',
+      autoCreateIssue: true,
     },
   },
   themeConfig: { //这里面加入各种插件
