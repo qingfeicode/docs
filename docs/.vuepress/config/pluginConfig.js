@@ -1,5 +1,5 @@
 const moment = require('moment'); 
-
+const secret = require("./secret");
 module.exports= {
   '@vuepress/last-updated': {
     transformer: (timestamp) => moment(timestamp).format("LLLL	") //通过moment插件管理室间格式
@@ -18,8 +18,8 @@ module.exports= {
     // 其他的 Vssue 配置
     owner: 'qingfeicode',//自己
     repo: 'docs',
-    clientId: '727878822562f3a35d27',
-    clientSecret: 'e62f435ea68e304aa148734f7f98b0dce29924ae',
+    clientId: secret.clientId,
+    clientSecret: secret.clientSecret,
     autoCreateIssue: true,
   },
   '@vuepress/back-to-top':true
